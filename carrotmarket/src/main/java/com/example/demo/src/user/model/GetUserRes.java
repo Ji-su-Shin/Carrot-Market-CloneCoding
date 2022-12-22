@@ -8,10 +8,16 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
+/*
+
+ */
 public class GetUserRes {
     private int userIdx;
-    private String userName;
-    private String ID;
+    private String nickname;
     private String email;
-    private String password;
+    private String phoneNumber;
+    private float mannerTemp;
+    private int reDealHopeRate;
+    private int responseRate;
+    private Timestamp createdAt;
 }

@@ -9,8 +9,13 @@ import lombok.Setter;
 @AllArgsConstructor
 public class User {
     private int userIdx;
-    private String ID;
-    private String userName;
-    private String password;
+    private String nickname;
     private String email;
+    private String phoneNumber;
+    private float mannerTemp;
+    private int reDealHopeRate;
+    private int responseRate;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
+    status char status;
 }
