@@ -56,6 +56,18 @@ public class UserDao {
                         rs.getString("password")),
                 getUserParams);
     }
+
+//    public GetUserMyCarrotRes getUserMyCarrot(int useIdx){
+//        String getUserMyCarrotQuery = "select userIdx from User full outer join UserPhoto on User. where userIdx = ?"
+//        int getUserParams = userIdx;
+//        return this.jdbcTemplate.queryForObject(getUserMyCarrotQuery,
+//                (rs, rowNum) -> new GetUserMyCarrotRes(
+//                        rs.getInd("userIdx"),
+//                        rs.getString("nickname"),
+//                        rs.getString("townName"),
+//                        rs.getString("userPhoto")),
+//                getUserParams);
+//    }
     
 
     public int createUser(PostUserReq postUserReq){

@@ -61,6 +61,16 @@ public class UserProvider {
         }
     }
 
+    // 나의 당근에서 정보 불러오기
+    public GetUserMyCarrot getUserMyCarrot(int userIdx) throws BaseExeption {
+        try {
+            GetUserMyCarrot getUserRes = userDao.getUserMyCarrot(userIdx);
+            return getUserRes;
+        } catch (Exception exception) {
+            throw new BaseException(DATABASE_ERROR);
+        }
+    }
+
     public int checkEmail(String email) throws BaseException{
         try{
             return userDao.checkEmail(email);

@@ -79,6 +79,27 @@ public class UserController {
 
     }
 
+
+    /**
+     * 회원 1명 조회 API => 나의 당근에서 조회
+     * [GET] /users/:userIdx
+     * @return BaseResponse<getUserMyCarrotRes>
+     */
+    // Path-variable
+    @ResponseBody
+    @GetMapping("/my-carrot/{userIdx}") // (GET) 127.0.0.1:9000/app/users/:userIdx
+    public BaseResponse<GetUserMyCarrotRes> getUser(@PathVariable("userIdx") int userIdx) {
+        // Get Users
+        try{
+            GetUserMyCarrotRes getUserMyCarrotRes = userProvider.getUser(userIdx);
+            return new BaseResponse<>(getUserMyCarrotRes);
+        } catch(BaseException exception){
+            return new BaseResponse<>((exception.getStatus()));
+        }
+
+    }
+
+
     /**
      * 회원가입 API
      * [POST] /users
