@@ -57,7 +57,7 @@ public class UserDao {
                 getUserParams);
     }
 
-//    public GetUserMyCarrotRes getUserMyCarrot(int useIdx){
+    public GetUserMyCarrotRes getUserMyCarrot(int useIdx){
 //        String getUserMyCarrotQuery = "select userIdx from User full outer join UserPhoto on User. where userIdx = ?"
 //        int getUserParams = userIdx;
 //        return this.jdbcTemplate.queryForObject(getUserMyCarrotQuery,
@@ -67,7 +67,7 @@ public class UserDao {
 //                        rs.getString("townName"),
 //                        rs.getString("userPhoto")),
 //                getUserParams);
-//    }
+    }
     
 
     public int createUser(PostUserReq postUserReq){
